@@ -1,44 +1,49 @@
+
 /**
  * Beschreiben Sie hier die Klasse Raum.
  *
  * @author (Ihr Name)
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class Raum
-{
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
+public class Raum {
     private int geb;
     private int etage;
     private int raum;
+    private Reservierung[] alleReservierungen;
+    private int anzahlReservierungen;
 
-    private int neu;
-    private int newww;
-
-    /**hier war ich
-     *sdfdf
-     */
-    private Reservierung[] reservierungen;
-    /**
-     * Konstruktor für Objekte der Klasse Raum
-     */
-    public Raum(int geb, int etage, int raum)
-    {
+    public Raum(int geb, int etage, int raum){
+        if(anzahlReservierungen == 0){
+            alleReservierungen = new Reservierung[10];
+        }
         this.geb = geb;
-        this.etage= etage;
-        this.raum= raum;
+        this.etage = etage;
+        this.raum = raum;
     }
-    public String toString(){
-        return String.format("Raum %d-%d.%d",geb,etage,raum);
-    }
-    public void addReservierung(Reservierung reservierung){
-        this.reservierungen = new Reservierung[0];
-    }
-    /**
-     *angeblich für die Speicherung der Info über die Reservierung
 
-    public void addReservierung(Reservierung reservierung)
-    {
-// tragen Sie hier den Code ein
-        return x + y;
-    }*/
+    public void addReservierung(Reservierung reservierung){
+        alleReservierungen[anzahlReservierungen] = reservierung;
+        anzahlReservierungen++;
+    }
+
+    public Reservierung getReservierung(int index){
+        return alleReservierungen[index];
+    }
+
+    public int getGeb(){
+        return geb;
+    }
+
+    public int getEtage(){
+        return etage;
+    }
+
+    public int getRaum(){
+        return raum;
+    }
+
+    public String toString(){
+        return geb + "-" +etage + "." +raum;
+    }
+
 }
