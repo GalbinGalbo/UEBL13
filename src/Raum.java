@@ -11,6 +11,11 @@ public class Raum
     private int etage;
     private int raum;
 
+    private int neu;
+
+    /**hier war ich
+     *
+     */
     private Reservierung[] reservierungen;
     /**
      * Konstruktor für Objekte der Klasse Raum
