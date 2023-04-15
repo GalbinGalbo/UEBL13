@@ -12,6 +12,7 @@ public class Raum
     private int raum;
 
     private int neu;
+    private int newww;
 
     /**hier war ich
      *sdfdf
