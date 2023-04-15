@@ -14,7 +14,7 @@ public class Raum
     private int neu;
 
     /**hier war ich
-     *
+     *sdfdf
      */
     private Reservierung[] reservierungen;
     /**
