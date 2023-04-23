@@ -1,3 +1,4 @@
+package ueb13;
 
 /**
  * Beschreiben Sie hier die Klasse alleRaeume.
@@ -24,7 +25,7 @@ public class AlleRaeume {
     public Raum findRaum(int geb, int etage, int raumNr){
         int index = checkRaum(geb, etage, raumNr);
         if(index == -1){
-            throw new IllegalArgumentException("Der Raum existiert nicht");
+            throw new IllegalArgumentException("Der ueb13.Raum existiert nicht");
         }
         Raum raum = alleRaeume[index];
         return raum;
@@ -45,7 +46,7 @@ public class AlleRaeume {
     }
 
     public String toString(){
-        String ausgabe = "Raum ";
+        String ausgabe = "ueb13.Raum ";
         for(int i = 0; i < anzahlRaeume; i++){
             Raum raum = alleRaeume[i];
             ausgabe = ausgabe + raum + raum.getReservierung(i) +"\n";

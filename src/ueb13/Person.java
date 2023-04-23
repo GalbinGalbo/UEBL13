@@ -1,5 +1,7 @@
+package ueb13;
+
 /**
- * Beschreiben Sie hier die Klasse Person.
+ * Beschreiben Sie hier die Klasse ueb13.Person.
  *
  * @author (Ihr Name)
  * @version (eine Versionsnummer oder ein Datum)

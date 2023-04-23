@@ -1,6 +1,7 @@
+package ueb13;
 
 /**
- * Beschreiben Sie hier die Klasse Reservierung.
+ * Beschreiben Sie hier die Klasse ueb13.Reservierung.
  *
  * @author (Ihr Name)
  * @version (eine Versionsnummer oder ein Datum)

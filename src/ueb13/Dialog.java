@@ -1,6 +1,8 @@
+package ueb13;
+
 import java.util.Scanner;
 /**
- * Beschreiben Sie hier die Klasse Dialog.
+ * Beschreiben Sie hier die Klasse ueb13.Dialog.
  *
  * @author (Ihr Name)
  * @version (eine Versionsnummer oder ein Datum)
@@ -27,7 +29,7 @@ public class Dialog {
         String email = scanner.nextLine();
 
         Mitarbeiter mitarbeiter = new Mitarbeiter(vorname, nachname, email);
-        System.out.println("Mitarbeiter " + mitarbeiter + " wurde erstellt");
+        System.out.println("ueb13.Mitarbeiter " + mitarbeiter + " wurde erstellt");
         alleMitarbeiter.mitarbeiterAnlegen(mitarbeiter);
     }
 
@@ -37,7 +39,7 @@ public class Dialog {
         int geb = scanner.nextInt();
         System.out.println("Etage eingeben:");
         int etage = scanner.nextInt();
-        System.out.println("Raum eingeben:");
+        System.out.println("ueb13.Raum eingeben:");
         int raumNr = scanner.nextInt();
 
         Raum raum = new Raum(geb, etage, raumNr);
@@ -46,22 +48,22 @@ public class Dialog {
 
     public void reserviere(){
         if(alleMitarbeiter.getAnzahlMitarbeiter() == 0){
-            throw new IllegalArgumentException("Mitarbeiter erstellen");
+            throw new IllegalArgumentException("ueb13.Mitarbeiter erstellen");
         }
         if(alleRaeume.getAnzahlRaeume() == 0){
-            throw new IllegalArgumentException("Raum erstellen");
+            throw new IllegalArgumentException("ueb13.Raum erstellen");
         }
 
-        System.out.println("In welchem Raum soll der Mitarbeiter die Reservierung buchen");
+        System.out.println("In welchem ueb13.Raum soll der ueb13.Mitarbeiter die ueb13.Reservierung buchen");
         Raum raum = raumAuswaehlen();
 
-        System.out.println("(Von Uhrzeit) Stunde eingeben");
+        System.out.println("(Von ueb13.Uhrzeit) Stunde eingeben");
         int stundeVon = scanner.nextInt();
         System.out.println("Minute eingeben:");
         int minuteVon = scanner.nextInt();
         Uhrzeit uhrzeitVon = new Uhrzeit(stundeVon, minuteVon);
 
-        System.out.println("(Bis Uhrzeit) Stunde eingeben");
+        System.out.println("(Bis ueb13.Uhrzeit) Stunde eingeben");
         int stundeBis = scanner.nextInt();
         System.out.println("Minute eingeben:");
         int minuteBis = scanner.nextInt();
@@ -70,7 +72,7 @@ public class Dialog {
         System.out.println("Bemerkung eingeben:");
         String bemerkung = scanner.nextLine();
 
-        System.out.println("Welcher Mitarbeiter soll die Reservierung buchen(Nachname eingeben)");
+        System.out.println("Welcher ueb13.Mitarbeiter soll die ueb13.Reservierung buchen(Nachname eingeben)");
         String nachname = scanner.nextLine();
         Mitarbeiter mitarbeiter = alleMitarbeiter.findMitarbeiter(nachname);
 
@@ -79,7 +81,7 @@ public class Dialog {
         reservierung.setMitarbeiter(mitarbeiter);
         reservierung.setRaum(raum);
         raum.addReservierung(reservierung);
-        System.out.println("Raum " + raum + " wurde von " + mitarbeiter + " von " + uhrzeitVon + " bis " + uhrzeitBis + " gebucht");
+        System.out.println("ueb13.Raum " + raum + " wurde von " + mitarbeiter + " von " + uhrzeitVon + " bis " + uhrzeitBis + " gebucht");
     }
 
     public void mitarbeiterAusgeben(){
@@ -95,7 +97,7 @@ public class Dialog {
         int geb = scanner.nextInt();
         System.out.println("Etage eingeben:");
         int etage = scanner.nextInt();
-        System.out.println("Raum eingeben:");
+        System.out.println("ueb13.Raum eingeben:");
         int raumNr = scanner.nextInt();
 
         Raum raum = alleRaeume.findRaum(geb,etage,raumNr);
@@ -109,11 +111,11 @@ public class Dialog {
     }
 
     public void menueAusgeben(){
-        System.out.println("1: Mitarbeiter erstellen+\n" +
-                "2: Raum erstellen\n"+
-                "3: Reserviere Raum\n"+
-                "4: Mitarbeiter ausgeben\n"+
-                "5: Raum mit Reservierungen ausgeben\n");
+        System.out.println("1: ueb13.Mitarbeiter erstellen+\n" +
+                "2: ueb13.Raum erstellen\n"+
+                "3: Reserviere ueb13.Raum\n"+
+                "4: ueb13.Mitarbeiter ausgeben\n"+
+                "5: ueb13.Raum mit Reservierungen ausgeben\n");
     }
 
     public void ausfuehrenFunktion(int funktion){

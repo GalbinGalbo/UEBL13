@@ -1,3 +1,4 @@
+package ueb13;
 
 /**
  * Beschreiben Sie hier die Klasse alleMitarbeiter.
@@ -21,7 +22,7 @@ public class AlleMitarbeiter {
     public Mitarbeiter findMitarbeiter(String nachname){
         int index = checkMitarbeiter(nachname);
         if(index == -1){
-            throw new IllegalArgumentException("Mitarbeiter mit dem Nachnamen existiert nicht");
+            throw new IllegalArgumentException("ueb13.Mitarbeiter mit dem Nachnamen existiert nicht");
         }
         Mitarbeiter mitarbeiter = alleMitarbeiter[index];
         return mitarbeiter;
